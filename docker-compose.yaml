@@ -5,8 +5,19 @@ services:
     ports:
       - "8082:80"
     restart: always
+    networks:
+    coffee"configs:
+    ipv4_address: 192.168.92.0/24
+
   website2:
     image: caddy
     ports:
       - "8083:80"
     restart: always
+
+networks:
+  coffee:
+  ipam:
+   driver: defualt
+   config:
+    -subnet: "192.168.92.0/24"
