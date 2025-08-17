@@ -6,8 +6,8 @@ services:
       - "8082:80"
     restart: always
     networks:
-    coffee"configs:
-    ipv4_address: 192.168.92.0/24
+     coffee:
+      ipv4_address: 192.168.0.34
 
   website2:
     image: caddy
@@ -17,7 +17,7 @@ services:
 
 networks:
   coffee:
-  ipam:
-   driver: defualt
-   config:
-    -subnet: "192.168.92.0/24"
+   ipam:
+    driver: default
+    config:
+     - subnet: "192.168.0.0/24"
